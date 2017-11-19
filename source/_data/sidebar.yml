@@ -1,79 +1,60 @@
 docs:
   getting_started:
     overview: index.html
-    setup: setup.html
-    configuration: configuration.html
-    commands: commands.html
-    migration: migration.html
-  basic_usage:
-    writing: writing.html
-    front_matter: front-matter.html
-    tag_plugins: tag-plugins.html
-    asset_folders: asset-folders.html
-    data_files: data-files.html
-    server: server.html
-    generating: generating.html
-    deployment: deployment.html
-  customization:
-    permalinks: permalinks.html
-    themes: themes.html
-    templates: templates.html
-    variables: variables.html
-    helpers: helpers.html
-    internationalization: internationalization.html
-    plugins: plugins.html
-  miscellaneous:
-    troubleshooting: troubleshooting.html
-    contributing: contributing.html
+    mainnet-parameters: parameters-of-mainnet.html
+    windows_setup: setup-windows.html
+    macosx_setup: setup-macosx.html
+    linux_setup: setup-linux.html
+    config_file: config-file.html
+    command_line: command-line.html
+  features:
+    overview: features-index.html
+    issue_token: features-issue-token.html
+    transfer_token: features-transfer-token.html
+    onchain_deposit: features-onchain-deposit.html
+  advanced_usage:
+    introduction: introduction.html
+    windows_build: build-windows.html
+    macos_build: build-macosx.html
+    linux_build: build-linux.html
+    options: options.html
+    testnet: testnet.html
+    commands_reference: commands-reference.html
+    private_chain: private-chain.html
 
 api:
-  core:
+  blocks:
     overview: index.html
-    events: events.html
-    locals: locals.html
-    router: router.html
-    box: box.html
-    rendering: rendering.html
-    posts: posts.html
-    scaffolds: scaffolds.html
-    themes: themes.html
-  extensions:
-    console: console.html
-    deployer: deployer.html
-    filter: filter.html
-    generator: generator.html
-    helper: helper.html
-    migrator: migrator.html
-    processor: processor.html
-    renderer: renderer.html
-    tag: tag.html
+  account:
+    overview: index.html
+  address:
+    overview: index.html
+  transaction:
+    overview: index.html
+  balance:
+    overview: index.html
+  asset:
+    overview: index.html
+  identity:
+    overview: index.html
 
 developers:
-  getting_started:
+  overview:
     overview: index.html
-    setup: setup.html
-    configuration: configuration.html
-    commands: commands.html
-    migration: migration.html
-  basic_usage:
-    writing: writing.html
-    front_matter: front-matter.html
-    tag_plugins: tag-plugins.html
-    asset_folders: asset-folders.html
-    data_files: data-files.html
-    server: server.html
-    generating: generating.html
-    deployment: deployment.html
-  customization:
-    permalinks: permalinks.html
-    themes: themes.html
-    templates: templates.html
-    variables: variables.html
-    helpers: helpers.html
-    internationalization: internationalization.html
-    plugins: plugins.html
-  miscellaneous:
-    troubleshooting: troubleshooting.html
-    contributing: contributing.html
+  digital_asset:
+    overview: da-index.html
+    da-issue-token: da-issue-token.html
+    da_onchain_deposit: da-onchain-deposit.html
+  digital_identity:
+    overview: di-index.html
+  base_layer:
+    account_model: account-model.html
+    consensus_and_mining: consensus-and-mining.html
+    database: database.html
+    httpserver: httpserver.html
+    p2p_network: p2p-network.html
+    utxo_and_script: utxo-and-script.html
 
-
+whitepaper:
+    metaverse: index.html
+    digital_identity: digital-identity.html
