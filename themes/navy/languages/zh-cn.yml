@@ -1,9 +1,9 @@
 menu:
   docs: 文档
   api: API
-  news: 新闻
-  plugins: 插件
-  themes: 主题
+  whitepaper: 白皮书
+  developers: 开发者
+  about: 关于
   search: 搜索
 
 index:

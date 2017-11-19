@@ -48,7 +48,7 @@ api:
     renderer: renderer.html
     tag: tag.html
 
-developer:
+developers:
   getting_started:
     overview: index.html
     setup: setup.html

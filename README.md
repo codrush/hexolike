@@ -1,43 +1,20 @@
-# Hexo Official Website
-<!-- Markdown snippet -->
-[![Build Status](https://travis-ci.org/hexojs/site.svg?branch=master)](https://travis-ci.org/hexojs/site)
+# Metaverse - THE NEW REALITY
 
-The website for Hexo. You can see the generated files at [hexojs/hexojs.github.io](https://github.com/hexojs/hexojs.github.io) repository.
+This repository provides Metaverse documentation sources.
 
-## Getting started
+[Install hexo](https://hexo.io/docs/setup.html)
 
-Install dependencies:
-
-``` bash
-$ git clone https://github.com/hexojs/site.git
-$ cd site
-$ npm install
+Configuration for this repository
+```bash
+git clone https://github.com/codrush/mvs-docs
+npm install
+cd themes/doc && npm install
 ```
 
-Generate:
-
-``` bash
-$ hexo generate
+Test it on localhost:
+```bash
+hexo g
+hexo s
+npm install --save hexo-deployer-git
+hexo d
 ```
-
-Run server:
-
-``` bash
-$ hexo server
-```
-
-## Contributors
-
-- English - [tommy351](https://github.com/tommy351)
-- 正體中文 - [tommy351](https://github.com/tommy351)
-- 简体中文 - [pinggod](https://github.com/pinggod), [Xuanwo](https://github.com/Xuanwo)
-- Русский - [twirlfog](https://github.com/twirlfog)
-- 한국어 - [lazyrodi](https://github.com/lazyrodi)
-- Deutschland - [philippnagel](https://github.com/philippnagel)
-
-## License
-
-[CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
-
-[tommy351]: https://github.com/tommy351
-[pinggod]: https://github.com/pinggod

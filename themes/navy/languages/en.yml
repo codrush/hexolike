@@ -1,13 +1,10 @@
 menu:
   docs: Docs
   api: API
-  news: News
-  plugins: Plugins
-  themes: Themes
   search: Search
   whitepaper: Whitepaper
-  developer : Developers
-  About : about
+  developers : Developers
+  about : About
 
 index:
   get_started: Get started
