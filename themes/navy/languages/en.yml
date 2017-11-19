@@ -19,51 +19,53 @@ page:
 
 sidebar:
   docs:
-    getting_started: Getting Started
-    overview: Overview
-    setup: Setup
-    configuration: Configuration
-    commands: Commands
-    migration: Migration
-    basic_usage: Basic Usage
-    writing: Writing
-    front_matter: Front-matter
-    tag_plugins: Tag Plugins
-    asset_folders: Asset Folders
-    data_files: Data Files
-    server: Server
-    generating: Generating
-    deployment: Deployment
-    customization: Customization
-    permalinks: Permalinks
-    themes: Themes
-    structure: Structure
-    templates: Templates
-    variables: Variables
-    helpers: Helpers
-    internationalization: Internationalization (i18n)
-    plugins: Plugins
-    miscellaneous: Miscellaneous
-    troubleshooting: Troubleshooting
-    contributing: Contributing
+    getting_started: get started
+    overview: overview
+    mainnet_parameters: mainnet parameters
+    windows_setup: Windows setup
+    macosx_setup: Macosx setup
+    linux_setup: Linux setup
+    config_file: config file
+    command_line: command line
+    features: features
+    issue_token: issue token
+    transfer_token: transfer token
+    onchain_deposit: onchain deposit
+    advanced_usage: full node wallet
+    introduction: introduction
+    windows_build: build windows
+    macos_build: build macosx
+    linux_build: build linux
+    options: options
+    testnet: testnet
+    commands_reference: commands reference
+    private_chain: private chain
+
   api:
-    core: Core
-    overview: Overview
-    events: Events
-    locals: Locals
-    router: Router
-    box: Box
-    rendering: Rendering
-    posts: Posts
-    scaffolds: Scaffolds
-    themes: Themes
-    extensions: Extensions
-    console: Console
-    deployer: Deployer
-    filter: Filter
-    generator: Generator
-    helper: Helper
-    migrator: Migrator
-    processor: Processor
-    renderer: Renderer
-    tag: Tag
+    overview: index
+    blocks: blocks
+    account: account
+    address: address
+    transaction: transaction
+    balance: balance
+    asset: asset
+    identity: identity
+
+  developers:
+    overview: overview
+    digital_asset: digital asset
+    da_issue_token: da issue token
+    da_onchain_deposit: da onchain deposit
+    digital_identity: digital identity
+    base_layer: base_layer
+    account_model: account model
+    consensus_and_mining: consensus and mining
+    database: database
+    httpserver: httpserver
+    p2p_network: p2p network
+    utxo_and_script: utxo and script
+
+  whitepaper:
+    whitepaper: whitepaper
+    metaverse: metaverse whitepaper
+    digital_identity: digital identity whitepaper

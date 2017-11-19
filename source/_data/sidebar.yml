@@ -1,7 +1,7 @@
 docs:
   getting_started:
     overview: index.html
-    mainnet-parameters: parameters-of-mainnet.html
+    mainnet_parameters: parameters-of-mainnet.html
     windows_setup: setup-windows.html
     macosx_setup: setup-macosx.html
     linux_setup: setup-linux.html
@@ -43,7 +43,7 @@ developers:
     overview: index.html
   digital_asset:
     overview: da-index.html
-    da-issue-token: da-issue-token.html
+    da_issue_token: da-issue-token.html
     da_onchain_deposit: da-onchain-deposit.html
   digital_identity:
     overview: di-index.html
@@ -56,5 +56,6 @@ developers:
     utxo_and_script: utxo-and-script.html
 
 whitepaper:
-    metaverse: index.html
-    digital_identity: digital-identity.html
+    whitepaper:
+      metaverse: index.html
+      digital_identity: digital-identity.html
