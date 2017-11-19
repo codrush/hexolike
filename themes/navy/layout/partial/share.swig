@@ -1,7 +1,7 @@
 <!-- GitHub star -->
 <a class="github-button" href="https://github.com/mvs-org/metaverse" data-icon="octicon-star" data-show-count="true" aria-label="Star mvs-org/metaverse on GitHub">Star</a>
 <!-- GitHub fork -->
-<a class="github-button" href="https://github.com/mvs-org/metaverse/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork hexojs/hexo on GitHub">Fork</a><!-- Tweet button -->
+<a class="github-button" href="https://github.com/mvs-org/metaverse/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork mvs-org/metaverse on GitHub">Fork</a><!-- Tweet button -->
 <!-- Twitter follow button -->
 <a href="https://twitter.com/mvs_org" class="twitter-follow-button" data-show-count="true">Follow @mvs_org</a>
 <!-- Github Button -->
