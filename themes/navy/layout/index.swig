@@ -12,11 +12,11 @@
     <div class="inner">
       {{ page.content }}
       <ul id="intro-cmd-wrap">
-        <li class="intro-cmd-item">npm install hexo-cli -g</li>
-        <li class="intro-cmd-item">hexo init blog</li>
-        <li class="intro-cmd-item">cd blog</li>
-        <li class="intro-cmd-item">npm install</li>
-        <li class="intro-cmd-item">hexo server</li>
+        <li class="intro-cmd-item">mvsd -t</li>
+        <li class="intro-cmd-item">mvs-cli getnewaccount &lt;account&gt; &lt;passwd&gt;</li>
+        <li class="intro-cmd-item">mvs-cli getnewaddress &lt;account&gt; &lt;passwd&gt;</li>
+        <li class="intro-cmd-item">mvs-cli send &lt;account&gt; &lt;passwd&gt; &lt;receiver_address&gt; &lt;ETP_bits&gt;</li>
+        <li class="intro-cmd-item">mvs-cli gettransaction &lt;tx_id&gt;</li>
       </ul>
       <div id="intro-get-started-wrap">
         <a href="docs/" id="intro-get-started-link">{{ __('index.get_started') }}</a>
