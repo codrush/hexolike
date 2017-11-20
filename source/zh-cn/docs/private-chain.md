@@ -1,46 +1,22 @@
+title: 搭建私有链
 ---
-title: Navigation
----
 
-# Navigation
+## 参照[编译]和[配置选项]
+参照上述文档，我们可以通过配置配置文件，搭建基于元界的私有链，而不必改动代码。
 
-Navigation is fully customizable by updating the `navigation.yaml` file located in your `source/_data` folder.   
-Within that file you will describe how the **navigation/menu** links will be presented to the user.
+```bash
+# mvs configuration file exmaple
 
-Navigation entries are grouped by **category**.   
-There are two main navigation **categories**:
-
-* **logo**: used to define the values for the logo in the top navigation bar
-* **main**: used to define the values showed in the left sidebar
-
-For each navigation item you **must** define a `type` and, depending on the `type`, other attributes such as `text` and/or `path`.
-
-Each navigation item can have a special property called `children`, that, as you might have guessed, gives you the ability to "nest" navigation entries.
-
-*source/_data/navigation.yaml example*
-
-```yaml
-logo:
-- text: My Documentation
-  type: link
-  path: index.html
-
-main:
-- text: PROJECTS
-  type: label
-- text: My Awesome Projects
-  type: link
-  path: projects/my-awesome-project.html
-  children:
-  - text: My Awesome Projects Page 1
-    type: link
-    path: projects/my-awesome-project-page-1.html
+[network]
+# The minimum number of threads in the application threadpool, defaults to 50.
+threads = 10
+# The network protocol version, defaults to 70012.
+protocol = 70012
+# The magic number for message headers
+identifier = 0x6d73766d
+# The port for incoming connections, defaults to 5251 (15251 for testnet).
+inbound_port = 5251
 ```
 
-There are two `types` of navigation items:
-
-* **label**: navigation item as a label (it's not an anchor so it doesn't need a `path` value)
-* **link**: navigation item as a link
-
-<br>
-The `path` value for a link navigation item is just the markdown `filepath`, but with `.html` as extension.
+通过修改 identifier ，我们即可实现不同的区块链实例。
+即使是以主网模式运行，开发者也不必担心，主网的出块速度也是很快的，可以使用CPU挖矿继续测试。

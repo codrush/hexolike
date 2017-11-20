@@ -22,7 +22,7 @@ MVS全节点客户端均是静态链接(含libstdc++），编译完成后不存�
 * Make工具
 CMake2.8+
 ```bash
-yum/apt-get/yum install cmake
+yum/apt-get/brew install cmake
 ```
 
 
@@ -80,3 +80,13 @@ cd secp256k1
 make -j4
 sudo make install && sudo ldconfig
 ```
+
+## 编译与安装MVS
+```bash
+git clone https://github.com/mvs-org/metaverse.git
+cd metaverse && mkdir build && cd build
+cmake ..
+make -j4
+make install
+```
+It takes about 40 minutes.

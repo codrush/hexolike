@@ -1,95 +1,95 @@
+title: MacOSX环境下编译
 ---
-title: Get Started
----
 
-# Get started
-
-## Requirements
-
-To get started you need to have a couple of things installed:
-
-* [NodeJS](https://nodejs.org)
-* [Git](https://git-scm.com)
-
-### Installing Hexo
-
-Once all the requirements are installed, you can install [Hexo](https://hexo.io/) with npm:
-
-```
-$ npm install -g hexo-cli
+## 获取源码
+```bash
+git clone https://github.com/mvs-org/metaverse.git
 ```
 
-## Quick Start
-
-To quickly bootstrap a documentation website, we have setup an [example seed project](https://github.com/zalando-incubator/hexo-theme-doc-seed) that can be **cloned** and used a starting point.
-
-* Clone the seed project
-
-```
-$ git clone https://github.com/zalando-incubator/hexo-theme-doc-seed.git
+## 安装Homebrew
+如果已经安装可以跳过此步骤。
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-* Go into the resulting directory and install the dependencies
+## 编译工具设置
+| Compilier | Minimum Version |  Recommand Version |
+| --------------------------------- | ----------------- | ------------ |
+| gcc/g++ |   5.0.0               |  Newer than 5.0.0 |
+| LLVM    |   8.0.0               |  Newer than 8.0.0 |
+* c++ 编译器
+通过 `c++ -v` 可查看编译器版本。
+如果您的版本不支持，可以参照[如何升级GCC版本](/helpdoc/upgrade-gcc.html)。
+MVS全节点客户端均是静态链接(含libstdc++），编译完成后不存在额外依赖的问题。
 
-```
-$ cd hexo-theme-doc-seed && npm install
-```
-
-*  Start the preview server
-
-```
-$ hexo s
-```
-
-This command will run a built-in http server and watch for changes.
-
-If you open your browser to http://localhost:4000 you should see the documentation website up and running.     
-Nice! Now you can start [writing](./usage-and-configuration/writing.html) your content... have fun!
-
-
-> To know more, please check [server](https://hexo.io/docs/server.html) and [generating](https://hexo.io/docs/generating.html) from the official Hexo documentation.
-
-
-## Long Start
-
-This section assumes that you are familiar with [Hexo](https://hexo.io) usage. For new starters we suggest you have a look at the [Quick Start](#Quick-Start) guide.
-
-### Install via npm (recommended)
-
-```
-$ npm install git+ssh://git@github.com:zalando-incubator/hexo-theme-doc.git --save
+* Make工具
+CMake2.8+
+```bash
+brew install cmake
 ```
 
-Symlink the package in the `themes` folder. For Linux:
 
+## 依赖的库信息
+| Library Dependencies | Minimum Version | Recommand Version |
+| --------------------------------- | ----------------- | ------------ |
+| Boost     |   1.56               |  1.58/1.64      |
+| ZeroMQ|   4.20               |  4.21           |
+| spec256k1 |   -                  |  -              |
+
+库编译依赖GNU toolchain\(automake/autoconf/libtool\), 请安装
+```bash
+brew install automake/autoconf/libtool
 ```
-$ ln -s ./themes/doc ./node_modules/hexo-theme-doc
+或者自行编译安装，无版本要求；
+
+
+## 依赖的库安装步骤
+### boost 1.56+
+```bash
+sudo yum/apt-get/brew install libboost-all-dev
+```
+If build boost manually, please download boost from <http://www.boost.org/>.
+
+If build with boost 1.59~1.63, get compiling error on json_parser 'placeholders::_1' caused by boost bug:
+```
+/usr/local/include/boost/property_tree/json_parser/detail/parser.hpp:217:52: error: ‘_1’ was not declared in this scope
+```
+Please upgrade to 1.64, or modify parser.hpp manually at first.
+See boost issue details: <https://github.com/boostorg/property_tree/pull/26>
+
+### ZeroMQ 4.2.1+
+Install GNU toochain(automake/autoconf/libtool) at first:
+```bash
+yum/apt-get/brew install automake/autoconf/libtool
+```
+Module server/explorer required.
+```bash
+wget https://github.com/zeromq/libzmq/releases/download/v4.2.1/zeromq-4.2.1.tar.gz
+tar -xzvf zeromq-4.2.1.tar.gz
+cd zeromq-4.2.1
+./autogen.sh
+./configure
+make -j4
+sudo make install && sudo ldconfig
 ```
 
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Install via git (not recommended)
-
-```
-$ git clone git@github.com:zalando-incubator/hexo-theme-doc.git themes/doc
-$ cd themes/doc && npm install --prod
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
+### secp256k1 
+Module blockchain/database required.
+```bash
+git clone https://github.com/mvs-live/secp256k1
+cd secp256k1
+./autogen.sh
+./configure --enable-module-recovery
+make -j4
+sudo make install && sudo ldconfig
 ```
 
-### Activate the theme
-
-Update your project `_config.yml`
-
-```yaml
-theme: doc
-
-ignore:
-  - '**/themes/**/*(node_modules|lib)' # improve performance while `hexo server` is running
+## 编译与安装MVS
+```bash
+git clone https://github.com/mvs-org/metaverse.git
+cd metaverse && mkdir build && cd build
+cmake ..
+make -j4
+make install
 ```
+It takes about 40 minutes.

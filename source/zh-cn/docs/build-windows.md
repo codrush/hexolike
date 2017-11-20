@@ -1,95 +1,34 @@
+title: Windows环境下编译
 ---
-title: Get Started
----
 
-# Get started
+## Dependencies:
+* Microsoft Visual Studio Community 2015 With Update 3
+* [boost_1_63_0](https://sourceforge.net/projects/boost/files/boost/1.63.0/boost_1_63_0.zip/download)
+* [zeromq-4.2.1](https://github.com/zeromq/libzmq/releases/download/v4.2.1/zeromq-4.2.1.zip)
+* [secp256k1](https://github.com/mvs-org/secp256k1.git)
+* [metaverse](https://github.com/mvs-org/metaverse.git)
 
-## Requirements
-
-To get started you need to have a couple of things installed:
-
-* [NodeJS](https://nodejs.org)
-* [Git](https://git-scm.com)
-
-### Installing Hexo
-
-Once all the requirements are installed, you can install [Hexo](https://hexo.io/) with npm:
-
-```
-$ npm install -g hexo-cli
+## Get the source code
+### Download all the dependencies to the specific folder as below:
+```shell
+boost_1_63_0/
+zeromq-4.2.1/
+secp256k1/
+metaverse/
 ```
 
-## Quick Start
-
-To quickly bootstrap a documentation website, we have setup an [example seed project](https://github.com/zalando-incubator/hexo-theme-doc-seed) that can be **cloned** and used a starting point.
-
-* Clone the seed project
-
-```
-$ git clone https://github.com/zalando-incubator/hexo-theme-doc-seed.git
+## Build Metaverse Step by Step
+* Build Boost
+```shell
+bootstrap.bat
+b2.exe address-model=64 runtime-link=static link=static
 ```
 
-* Go into the resulting directory and install the dependencies
+* Build zeromq-4.2.1
+Open zeromq-4.2.1\builds\msvc\vs2015\libzmq.sln, switch to libzmq project, then build x64 Platform StaticDebug and StaticRelease versions separately.
 
-```
-$ cd hexo-theme-doc-seed && npm install
-```
+* Build secp256k1
+Open secp256k1\builds\msvc\vs2013\secp256k1.sln, switch to secp256k1 project, then build x64 Platform StaticDebug or StaticRelease versions separately.
 
-*  Start the preview server
-
-```
-$ hexo s
-```
-
-This command will run a built-in http server and watch for changes.
-
-If you open your browser to http://localhost:4000 you should see the documentation website up and running.     
-Nice! Now you can start [writing](./usage-and-configuration/writing.html) your content... have fun!
-
-
-> To know more, please check [server](https://hexo.io/docs/server.html) and [generating](https://hexo.io/docs/generating.html) from the official Hexo documentation.
-
-
-## Long Start
-
-This section assumes that you are familiar with [Hexo](https://hexo.io) usage. For new starters we suggest you have a look at the [Quick Start](#Quick-Start) guide.
-
-### Install via npm (recommended)
-
-```
-$ npm install git+ssh://git@github.com:zalando-incubator/hexo-theme-doc.git --save
-```
-
-Symlink the package in the `themes` folder. For Linux:
-
-```
-$ ln -s ./themes/doc ./node_modules/hexo-theme-doc
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Install via git (not recommended)
-
-```
-$ git clone git@github.com:zalando-incubator/hexo-theme-doc.git themes/doc
-$ cd themes/doc && npm install --prod
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Activate the theme
-
-Update your project `_config.yml`
-
-```yaml
-theme: doc
-
-ignore:
-  - '**/themes/**/*(node_modules|lib)' # improve performance while `hexo server` is running
-```
+* Build metaverse
+Open metaverse\builds\msvc-140\metaverse.sln, switch to mvsd project, then build x64 Platform Debug or Release versions separately.
