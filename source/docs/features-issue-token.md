@@ -1,95 +1,29 @@
+title: Create and Issue Tokens
 ---
-title: Get Started
----
 
-# Get started
+# Feature description
+Through just a few steps, you can create your own digital currency using the Metaverse Wallet. The Metaverse Blockchain allows you to register and issue digital assets, allowing you to digitize your assets and transfer value on a blockchain.
 
-## Requirements
-
-To get started you need to have a couple of things installed:
-
-* [NodeJS](https://nodejs.org)
-* [Git](https://git-scm.com)
-
-### Installing Hexo
-
-Once all the requirements are installed, you can install [Hexo](https://hexo.io/) with npm:
-
-```
-$ npm install -g hexo-cli
-```
-
-## Quick Start
-
-To quickly bootstrap a documentation website, we have setup an [example seed project](https://github.com/zalando-incubator/hexo-theme-doc-seed) that can be **cloned** and used a starting point.
-
-* Clone the seed project
-
-```
-$ git clone https://github.com/zalando-incubator/hexo-theme-doc-seed.git
-```
-
-* Go into the resulting directory and install the dependencies
-
-```
-$ cd hexo-theme-doc-seed && npm install
-```
-
-*  Start the preview server
-
-```
-$ hexo s
-```
-
-This command will run a built-in http server and watch for changes.
-
-If you open your browser to http://localhost:4000 you should see the documentation website up and running.     
-Nice! Now you can start [writing](./usage-and-configuration/writing.html) your content... have fun!
+All digital currency issued on the Metaverse public blockchain can be viewed in the wallet, at "All Assets”. 
 
 
-> To know more, please check [server](https://hexo.io/docs/server.html) and [generating](https://hexo.io/docs/generating.html) from the official Hexo documentation.
+# Create assets
+-   Enter the "Assets" page and click "Create asset" (marked in yellow below) to enter the asset creation page.
 
+![图片6](https://i.imgur.com/ITuiBOZ.png)
+- Please set the digital currency type, amount to be issued, decimal places and asset details, then click "Create Asset" to create your own digital asset.
 
-## Long Start
+![图片7](https://i.imgur.com/tJQBiXg.png)
+- Please note that assets are created locally and are not registered on the Metaverse Blockchain. No fees are charged to create an asset. Created assets will be displayed on the “My Assets” page.
 
-This section assumes that you are familiar with [Hexo](https://hexo.io) usage. For new starters we suggest you have a look at the [Quick Start](#Quick-Start) guide.
+![图片8](https://i.imgur.com/QwoFFSc.png)
 
-### Install via npm (recommended)
+# Issue assets
+Assets issuance refers to the registration of your locally created assets on the Metaverse Blockchain, which consumes a 10 ETP service charge.
+- After clicking "Create Assets" in the previous step, a popup will appear asking if you wish to issue the asset. If you choose “Issue”, it will consume 10 ETP to register your assets on the Metaverse Blockchain.
 
-```
-$ npm install git+ssh://git@github.com:zalando-incubator/hexo-theme-doc.git --save
-```
+![图片9](https://i.imgur.com/G2PnojF.png)
+- If you do not issue the asset immediately after it is created, you can visit the “My Assets” page to view and issue the assets you created locally.
 
-Symlink the package in the `themes` folder. For Linux:
+![](https://i.imgur.com/RNpszcQ.png)
 
-```
-$ ln -s ./themes/doc ./node_modules/hexo-theme-doc
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Install via git (not recommended)
-
-```
-$ git clone git@github.com:zalando-incubator/hexo-theme-doc.git themes/doc
-$ cd themes/doc && npm install --prod
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Activate the theme
-
-Update your project `_config.yml`
-
-```yaml
-theme: doc
-
-ignore:
-  - '**/themes/**/*(node_modules|lib)' # improve performance while `hexo server` is running
-```

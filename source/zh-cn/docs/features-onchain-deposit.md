@@ -1,95 +1,19 @@
+title:  链上存款(锁仓)
 ---
-title: Get Started
----
 
-# Get started
+#  功能说明
+- 您可以使用钱包来进行ETP锁仓，并支持您将ETP锁仓的收益发放到指定的地址。
 
-## Requirements
+# 锁仓操作
+- 在首页点击“存款”即可进入ETP锁仓页面
 
-To get started you need to have a couple of things installed:
+![图片16](https://i.imgur.com/KCahpoj.png)
 
-* [NodeJS](https://nodejs.org)
-* [Git](https://git-scm.com)
+-  输入您要锁仓的ETP数量，选择您愿意锁仓的时长，如果您想要把锁仓的ETP和利息自动发放到一个其他的地址，则勾选“存到一个指定的地址” 。
 
-### Installing Hexo
+![图片17](https://i.imgur.com/LtKskSj.png)
 
-Once all the requirements are installed, you can install [Hexo](https://hexo.io/) with npm:
+- 存款成功后，您将会在交易记录中看到自己此次锁仓的etp以及所获得的利息会在哪个区块解锁
 
-```
-$ npm install -g hexo-cli
-```
+![图片18](https://i.imgur.com/ibsy6Kk.png)
 
-## Quick Start
-
-To quickly bootstrap a documentation website, we have setup an [example seed project](https://github.com/zalando-incubator/hexo-theme-doc-seed) that can be **cloned** and used a starting point.
-
-* Clone the seed project
-
-```
-$ git clone https://github.com/zalando-incubator/hexo-theme-doc-seed.git
-```
-
-* Go into the resulting directory and install the dependencies
-
-```
-$ cd hexo-theme-doc-seed && npm install
-```
-
-*  Start the preview server
-
-```
-$ hexo s
-```
-
-This command will run a built-in http server and watch for changes.
-
-If you open your browser to http://localhost:4000 you should see the documentation website up and running.     
-Nice! Now you can start [writing](./usage-and-configuration/writing.html) your content... have fun!
-
-
-> To know more, please check [server](https://hexo.io/docs/server.html) and [generating](https://hexo.io/docs/generating.html) from the official Hexo documentation.
-
-
-## Long Start
-
-This section assumes that you are familiar with [Hexo](https://hexo.io) usage. For new starters we suggest you have a look at the [Quick Start](#Quick-Start) guide.
-
-### Install via npm (recommended)
-
-```
-$ npm install git+ssh://git@github.com:zalando-incubator/hexo-theme-doc.git --save
-```
-
-Symlink the package in the `themes` folder. For Linux:
-
-```
-$ ln -s ./themes/doc ./node_modules/hexo-theme-doc
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Install via git (not recommended)
-
-```
-$ git clone git@github.com:zalando-incubator/hexo-theme-doc.git themes/doc
-$ cd themes/doc && npm install --prod
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Activate the theme
-
-Update your project `_config.yml`
-
-```yaml
-theme: doc
-
-ignore:
-  - '**/themes/**/*(node_modules|lib)' # improve performance while `hexo server` is running
-```

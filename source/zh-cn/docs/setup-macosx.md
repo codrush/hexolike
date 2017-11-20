@@ -1,95 +1,12 @@
+title: 安装MacOSX版钱包
+comments: false
 ---
-title: Get Started
----
 
-# Get started
+# 下载钱包客户端
+到官网[https://mvs.org](http://mvs.org)下载macOS钱包客户端，本客户端目前支持macOS Sierra 和 macOS High Sierra系统。
 
-## Requirements
+安装包有标准版和数据包版，数据包版为自带数据库的安装版本，可以极大节省第一次的区块同步时间，建议新用户下载安装；由于数据包版可能会覆盖原始数据，建议老用户安装标准版。请根据您的情况选择合适的安装包。
 
-To get started you need to have a couple of things installed:
+# 安装钱包客户端
+双击安装程序，按照提示的步骤进行安装。点击Launchpad可查看安装好的钱包程序，双击，然后在上方任务栏找到钱包程序的图标，单击并选择“Open Metaverse“，打开钱包登录页面。
 
-* [NodeJS](https://nodejs.org)
-* [Git](https://git-scm.com)
-
-### Installing Hexo
-
-Once all the requirements are installed, you can install [Hexo](https://hexo.io/) with npm:
-
-```
-$ npm install -g hexo-cli
-```
-
-## Quick Start
-
-To quickly bootstrap a documentation website, we have setup an [example seed project](https://github.com/zalando-incubator/hexo-theme-doc-seed) that can be **cloned** and used a starting point.
-
-* Clone the seed project
-
-```
-$ git clone https://github.com/zalando-incubator/hexo-theme-doc-seed.git
-```
-
-* Go into the resulting directory and install the dependencies
-
-```
-$ cd hexo-theme-doc-seed && npm install
-```
-
-*  Start the preview server
-
-```
-$ hexo s
-```
-
-This command will run a built-in http server and watch for changes.
-
-If you open your browser to http://localhost:4000 you should see the documentation website up and running.     
-Nice! Now you can start [writing](./usage-and-configuration/writing.html) your content... have fun!
-
-
-> To know more, please check [server](https://hexo.io/docs/server.html) and [generating](https://hexo.io/docs/generating.html) from the official Hexo documentation.
-
-
-## Long Start
-
-This section assumes that you are familiar with [Hexo](https://hexo.io) usage. For new starters we suggest you have a look at the [Quick Start](#Quick-Start) guide.
-
-### Install via npm (recommended)
-
-```
-$ npm install git+ssh://git@github.com:zalando-incubator/hexo-theme-doc.git --save
-```
-
-Symlink the package in the `themes` folder. For Linux:
-
-```
-$ ln -s ./themes/doc ./node_modules/hexo-theme-doc
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Install via git (not recommended)
-
-```
-$ git clone git@github.com:zalando-incubator/hexo-theme-doc.git themes/doc
-$ cd themes/doc && npm install --prod
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Activate the theme
-
-Update your project `_config.yml`
-
-```yaml
-theme: doc
-
-ignore:
-  - '**/themes/**/*(node_modules|lib)' # improve performance while `hexo server` is running
-```

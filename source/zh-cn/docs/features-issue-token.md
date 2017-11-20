@@ -1,95 +1,28 @@
+title: 创建并发行资产token
 ---
-title: Get Started
----
 
-# Get started
+# 功能说明
+使用元界钱包，您可以通过非常简单的步骤来创建属于您自己的数字货币，在元界区块链上登记、发行您的数字资产，从而将您的资产数字化，实现在区块链上的价值转移。
+所有在元界公有链上发行的数字货币，均可以在钱包“全网资产”中查看。
 
-## Requirements
+# 创建资产
+-  进入“资产”页面，点击“创建资产”按钮，进入资产创建页面。
 
-To get started you need to have a couple of things installed:
+![](https://i.imgur.com/flByWqU.png)
+- 设置好您的数字货币符号、发行总量、小数位数、资产详情等，点击“创建资产” ，就可以创建自己的数字资产。
 
-* [NodeJS](https://nodejs.org)
-* [Git](https://git-scm.com)
+![](https://i.imgur.com/zSup9QO.png)
+- 请您注意的是，资产在未发行的情况下只是在本地创建，并未登记到元界区块链上。创建资产是不产生任何手续费的。创建的资产会显示在“我的资产”页面。
 
-### Installing Hexo
+![](https://i.imgur.com/HUbBXcQ.png)
 
-Once all the requirements are installed, you can install [Hexo](https://hexo.io/) with npm:
+# 发行资产
+发行资产是指将您本地创建的资产登记到元界公有链上，目前发行资产会消耗10ETP的手续费。
+- “创建资产”之后，会跳出一个提示框，提示您选择是否发布资产。如果选择“发布”，则消耗您10个ETP将资产登记到元界区块链上。
 
-```
-$ npm install -g hexo-cli
-```
+![](https://i.imgur.com/dXyqjD7.png)
+- 如果您在资产创建后并没有第一时间发布，那么您可以到资产页面查看已经创建的本地资产并进行发布。
 
-## Quick Start
-
-To quickly bootstrap a documentation website, we have setup an [example seed project](https://github.com/zalando-incubator/hexo-theme-doc-seed) that can be **cloned** and used a starting point.
-
-* Clone the seed project
-
-```
-$ git clone https://github.com/zalando-incubator/hexo-theme-doc-seed.git
-```
-
-* Go into the resulting directory and install the dependencies
-
-```
-$ cd hexo-theme-doc-seed && npm install
-```
-
-*  Start the preview server
-
-```
-$ hexo s
-```
-
-This command will run a built-in http server and watch for changes.
-
-If you open your browser to http://localhost:4000 you should see the documentation website up and running.     
-Nice! Now you can start [writing](./usage-and-configuration/writing.html) your content... have fun!
+![](https://i.imgur.com/h0riaBl.png)
 
 
-> To know more, please check [server](https://hexo.io/docs/server.html) and [generating](https://hexo.io/docs/generating.html) from the official Hexo documentation.
-
-
-## Long Start
-
-This section assumes that you are familiar with [Hexo](https://hexo.io) usage. For new starters we suggest you have a look at the [Quick Start](#Quick-Start) guide.
-
-### Install via npm (recommended)
-
-```
-$ npm install git+ssh://git@github.com:zalando-incubator/hexo-theme-doc.git --save
-```
-
-Symlink the package in the `themes` folder. For Linux:
-
-```
-$ ln -s ./themes/doc ./node_modules/hexo-theme-doc
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Install via git (not recommended)
-
-```
-$ git clone git@github.com:zalando-incubator/hexo-theme-doc.git themes/doc
-$ cd themes/doc && npm install --prod
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Activate the theme
-
-Update your project `_config.yml`
-
-```yaml
-theme: doc
-
-ignore:
-  - '**/themes/**/*(node_modules|lib)' # improve performance while `hexo server` is running
-```
