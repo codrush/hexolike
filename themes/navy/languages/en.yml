@@ -53,11 +53,12 @@ sidebar:
 
   developers:
     overview: overview
+    introduction: introduction
     digital_asset: digital asset
-    da_issue_token: da issue token
-    da_onchain_deposit: da onchain deposit
+    da_issue_token: issue token
+    da_onchain_deposit: onchain deposit
     digital_identity: digital identity
-    base_layer: base_layer
+    base_layer: base layer
     account_model: account model
     consensus_and_mining: consensus and mining
     database: database

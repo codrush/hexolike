@@ -53,6 +53,7 @@ sidebar:
 
   developers:
     overview: 概览
+    introduction: 介绍
     digital_asset: 数字资产
     da_issue_token: 发行Token
     da_onchain_deposit: 链上存款(锁仓)

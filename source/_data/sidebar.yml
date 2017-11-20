@@ -8,7 +8,6 @@ docs:
     config_file: config-file.html
     command_line: command-line.html
   features:
-    overview: features-index.html
     issue_token: features-issue-token.html
     transfer_token: features-transfer-token.html
     onchain_deposit: features-onchain-deposit.html
@@ -40,13 +39,13 @@ api:
 
 developers:
   overview:
-    overview: index.html
+    introduction: index.html
   digital_asset:
-    overview: da-index.html
+    introduction: da-index.html
     da_issue_token: da-issue-token.html
     da_onchain_deposit: da-onchain-deposit.html
   digital_identity:
-    overview: di-index.html
+    introduction: di-index.html
   base_layer:
     account_model: account-model.html
     consensus_and_mining: consensus-and-mining.html
