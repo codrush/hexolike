@@ -1,46 +1,61 @@
+title: 介绍
 ---
-title: Navigation
----
 
-# Navigation
+本文Metaverse简称为MVS;
 
-Navigation is fully customizable by updating the `navigation.yaml` file located in your `source/_data` folder.   
-Within that file you will describe how the **navigation/menu** links will be presented to the user.
+## MVS全节点介绍
 
-Navigation entries are grouped by **category**.   
-There are two main navigation **categories**:
+全节点（full nodes）是存储 MVS 区块链全部数据的节点，通过 P2P 的方式与区块链网络连接，在区块链网络中，所有的全节点都是平等的，既充当客户端又充当服务器。
+MVS全节点由两个程序和一个前端资源组成:
+* mvsd : 核心钱包程序，类似比特币中bitcoind的功能;
+* mvs-cli : 命令行交互工具，类似比特币中bitcoin-cli的功能;
+* mvs-htmls: 基于浏览器的前端交互资源，angularjs实现，本资源在对于开发者不是必需的;
 
-* **logo**: used to define the values for the logo in the top navigation bar
-* **main**: used to define the values showed in the left sidebar
+## MVS全节点钱包下载地址
+通常在[官网](https://mvs.org#download)能够下载到最新版的MVS全节点客户端;
 
-For each navigation item you **must** define a `type` and, depending on the `type`, other attributes such as `text` and/or `path`.
+支持的版本:
 
-Each navigation item can have a special property called `children`, that, as you might have guessed, gives you the ability to "nest" navigation entries.
+| OS Version                        | Version | mvsd&mvs-cli |
+| --------------------------------- | ------- | ----------------- |
+| Red Hat Enterprise Linux 7 Server | 7+ 	|   √               |
+| Ubuntu 							| 14.04+ |   √               |
+| Debian							| 8+ 	|   √               |
+| Fedora							| 21+ 	|   √               |
+| CentOS							| 6.5+ 	|   √               |
+| openSUSE 							| 13.2+	|   √               |
+| Docker                            | -		|   √               |
 
-*source/_data/navigation.yaml example*
+## MVS全节点钱包功能一览
+|                 | mvsd&mvs-cli | Broswer GUI |
+| --------------- | ---- | ---- |
+| 图形界面          |       |   √    |
+| 命令行界面        |   √   |   √    |
+| 创建账户 			|   √   |   √    |
+| 导入导出助记符    |   √   |   √    |
+| 创建地址 			|   √   |   √    |
+| 批量生成地址      |   √   |   √    |    
+| ETP转账           |   √   |   √    |  
+| ETP存款(锁仓)		|   √   |   √    |
+| 显示所有地址      |   √   |   √    |
+| 显示所有资产      |   √   |   √    |
+| 创建资产(未广播)  |   √   |   √    |
+| 删除资产(未广播)  |   √   |        |
+| 发行资产          |   √   |   √    |
+| 转移资产          |   √   |   √    |
+| 创建多方签名交易  |   √   |   √    |
+| 离线签名          |   √   |        |
+| 列出钱包中指定资产的交易明细 |   √   |    √    |
+| 挖矿            |   √   |        |
 
-```yaml
-logo:
-- text: My Documentation
-  type: link
-  path: index.html
 
-main:
-- text: PROJECTS
-  type: label
-- text: My Awesome Projects
-  type: link
-  path: projects/my-awesome-project.html
-  children:
-  - text: My Awesome Projects Page 1
-    type: link
-    path: projects/my-awesome-project-page-1.html
-```
+## 端口说明
 
-There are two `types` of navigation items:
+如果你想让外部程序访问该节点的 API 需要开放防火墙端口，以下是端口说明，可以全部开放也可按需开放。
 
-* **label**: navigation item as a label (it's not an anchor so it doesn't need a `path` value)
-* **link**: navigation item as a link
+|                    | 主网（Main Net） | 测试网（Test Net） |
+| ------------------ | ------------ | ------------- |
+| JSON-RPC via HTTPS | ×    | ×    |
+| JSON-RPC via HTTP  | 8820 | 8820 |
+| P2P via TCP        | 5251 | 15251|
 
-<br>
-The `path` value for a link navigation item is just the markdown `filepath`, but with `.html` as extension.

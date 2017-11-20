@@ -1,14 +1,18 @@
+title: 元界区块链测试网
 ---
-title: Google Analytics
----
 
-# Google Analytics
+## 测试网
+MVS的测试网(Test Net)是官方提供的，专供用户来开发、调试和测试的。
+测试网上面的系统费用是测试网中的 ETP，并非真实的 ETP，测试网的 ETP 可以在官网上免费申请。
 
-Update your `_config.yml` file by adding/updating the `google_analytics` property with your tracking ID.
+测试网的所有区块数据都是独立于主网的。如果开发简单的功能或者尝试注册资产的话，用测试网就足够了，待开发完成后可以迁移到主网上运行。
+元界的官网进行了更新，为了方便广大用户体验元界钱包的功能，元界官网<https://mvs.org>新增了”测试节点按钮”。
 
-```yaml
-theme_config:
-  google_analytics: your-tracking-id
-```
-
-> On localhost, the google_analytics snippet will not be included to prevent sending dummy data while you are working on your local machine.
+## 测试网的特点
+1. 用户不必消耗真正属于他们ETP即可真实体验元界钱包应用场景。
+2. 不需同步大量区块，节省时间。
+3. 体验资产转移、资产发行、资产增发等功能。
+4. 页面性能兼容性强，平台兼容性强。
+5. 钱包进程优化，极大减少了对系统资源的占用。
+6. 新增多重签名地址的创建、多重签名交易发送模块。
+7. 钱包的UI 进一步优化和调整。
