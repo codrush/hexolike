@@ -22,9 +22,9 @@ sidebar:
     getting_started: get started
     overview: overview
     mainnet_parameters: mainnet parameters
-    windows_setup: Windows setup
-    macosx_setup: Macosx setup
-    linux_setup: Linux setup
+    windows_setup: windows setup
+    macosx_setup: macosx setup
+    linux_setup: linux setup
     config_file: config file
     command_line: command line
     features: features
@@ -33,9 +33,9 @@ sidebar:
     onchain_deposit: onchain deposit
     advanced_usage: full node wallet
     introduction: introduction
-    windows_build: build windows
-    macos_build: build macosx
-    linux_build: build linux
+    windows_build: build on windows
+    macos_build: build on macosx
+    linux_build: build on linux
     options: options
     testnet: testnet
     commands_reference: commands reference
