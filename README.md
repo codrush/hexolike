@@ -3,12 +3,12 @@
 This repository provides Metaverse documentation sources.
 
 [Install hexo](https://hexo.io/docs/setup.html)
+[Forked from hexo-site](https://hexo.io/docs/setup.htm://github.com/hexojs/site)
 
 Configuration for this repository
 ```bash
-git clone https://github.com/codrush/mvs-docs
+git clone https://github.com/codrush/hexolike
 npm install
-cd themes/doc && npm install
 ```
 
 Test it on localhost:
