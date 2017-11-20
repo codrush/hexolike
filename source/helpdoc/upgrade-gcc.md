@@ -1,4 +1,5 @@
 title: Upgrade GCC Compiler
+comments: false
 -------
 
 To Support C++11/14, you have to upgrade c++ compiler.
