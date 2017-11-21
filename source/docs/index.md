@@ -1,96 +1,43 @@
----
 title: Get Started
 comments: false
 ---
 
-# Get started
+# Ease of access
+## Getting started
+The Metaverse full-node wallet is a cross-platform wallet program that operates trustlessly. It currently supports the Windows, Linux and MacOSX operating systems.
 
-## Requirements
+You may also use our light web wallet verified using SPV at https://myetpwallet.com.
 
-To get started you need to have a couple of things installed:
+## Wallet installation
+* [Windows download](setup-windows.html)
+* [Linux download](setup-linux.html)
+* [MacOSX download](setup-macosx.html)
 
-* [NodeJS](https://nodejs.org)
-* [Git](https://git-scm.com)
+You may collect a small amount of mainnet ETP here. 
+## Quick start
 
-### Installing Hexo
+### Register
+Enter the login page and click “Register”, set your username and password, then click on “Create an account”
+![图片26](http://ozr028g59.bkt.clouddn.com/17-11-21/94516277.jpg)
 
-Once all the requirements are installed, you can install [Hexo](https://hexo.io/) with npm:
+### Receiving ETP
+Open the wallet and click “address” at the top of the navigation bar to view your receiving addresses. Any of the addresses in your wallet can be used to receive digital currencies developed on the Metaverse public blockchain. You may choose any one of your wallet addresses as the receiving address.
+![图片27](http://ozr028g59.bkt.clouddn.com/17-11-21/57725692.jpg)
 
-```
-$ npm install -g hexo-cli
-```
+### Query transaction hash
+Metaverse Wallet provides a portion of the block explorer’s functions. Users can inquire about blocks, transactions or the details of an address through querying the block’s serial number, the transaction hash and the address respectively. Each transaction produces a hash. You may view a transaction’s details via querying its transaction hash.
+![图片28](http://ozr028g59.bkt.clouddn.com/17-11-21/59883126.jpg)
 
-## Quick Start
-
-To quickly bootstrap a documentation website, we have setup an [example seed project](https://github.com/zalando-incubator/hexo-theme-doc-seed) that can be **cloned** and used a starting point.
-
-* Clone the seed project
-
-```
-$ git clone https://github.com/zalando-incubator/hexo-theme-doc-seed.git
-```
-
-* Go into the resulting directory and install the dependencies
-
-```
-$ cd hexo-theme-doc-seed && npm install
-```
-
-*  Start the preview server
-
-```
-$ hexo s
-```
-
-This command will run a built-in http server and watch for changes.
-
-If you open your browser to http://localhost:4000 you should see the documentation website up and running.     
-Nice! Now you can start [writing](./usage-and-configuration/writing.html) your content... have fun!
+### Sending ETP
+Click the "transfer" command shown next to your assets. Fill in transfer details such as the sending and receiving address, transfer amount, username and password, then click "confirm transfer".
+![图片29](http://ozr028g59.bkt.clouddn.com/17-11-21/59988969.jpg)
 
 
-> To know more, please check [server](https://hexo.io/docs/server.html) and [generating](https://hexo.io/docs/generating.html) from the official Hexo documentation.
+# Metaverse full node wallet introduction
+Full nodes are nodes that store the entire Metaverse blockchain and are connected in a P2P network architecture. In the blockchain network, all full nodes are treated as equals, and serve as both clients and servers. 
 
+The MVS full node consists of two programs and a graphical interface:
+•   mvsd: The core wallet program, similar to Bitcoin’s bitcoind;
+•   mvs-cli: a command line interface, similar to Bitcoin’s bitcoin-cli
+•   mvs-htmls: a browser-based graphical user interface built with AngularJS. This GUI may not be necessary for developers. 
 
-## Long Start
-
-This section assumes that you are familiar with [Hexo](https://hexo.io) usage. For new starters we suggest you have a look at the [Quick Start](#Quick-Start) guide.
-
-### Install via npm (recommended)
-
-```
-$ npm install git+ssh://git@github.com:zalando-incubator/hexo-theme-doc.git --save
-```
-
-Symlink the package in the `themes` folder. For Linux:
-
-```
-$ ln -s ./themes/doc ./node_modules/hexo-theme-doc
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Install via git (not recommended)
-
-```
-$ git clone git@github.com:zalando-incubator/hexo-theme-doc.git themes/doc
-$ cd themes/doc && npm install --prod
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Activate the theme
-
-Update your project `_config.yml`
-
-```yaml
-theme: doc
-
-ignore:
-  - '**/themes/**/*(node_modules|lib)' # improve performance while `hexo server` is running
-```
