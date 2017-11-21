@@ -9,15 +9,11 @@ comments: false
 # mvs configuration file exmaple
 
 [network]
-# The minimum number of threads in the application threadpool, defaults to 50.
-threads = 10
-# The network protocol version, defaults to 70012.
-protocol = 70012
 # The magic number for message headers
 identifier = 0x6d73766d
 # The port for incoming connections, defaults to 5251 (15251 for testnet).
 inbound_port = 5251
 ```
 
-通过修改 identifier ，我们即可实现不同的区块链实例。
+通过修改 `identifier` 为不同的值，我们即可实现不同的区块链实例。
 即使是以主网模式运行，开发者也不必担心，主网的出块速度也是很快的，可以使用CPU挖矿继续测试。
