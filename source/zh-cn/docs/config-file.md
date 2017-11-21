@@ -4,14 +4,14 @@ comments: false
 
 ## 配置mvs.conf
 你可以在<https://github.com/mvs-org/metaverse/tree/master/etc>找到几个常用的配置文件：
-* mvs.conf - 主网配置文件
-* mvs-test.conf - 测试网配置文件
-* mvs-full-setting-template.conf  - 完整的参数模板的配置文件
+* `mvs.conf` - 主网配置文件
+* `mvs-test.conf` - 测试网配置文件
+* `mvs-full-setting-template.conf`  - 完整的参数模板的配置文件
 
 mvs.conf 的默认配置路径如下：
-* Windows   : %HOMEPATH%\AppData\Roaming\Metaverse
-* Apple OSX : ~/Library/Application\ Support/Metaverse
-* Linux/Uinx: ~/.metaverse
+* Windows   : `%HOMEPATH%\AppData\Roaming\Metaverse`
+* Apple OSX : `~/Library/Application\ Support/Metaverse`
+* Linux/Uinx: `~/.metaverse`
 
 mvs.conf的示例内容:
 ```bash
@@ -51,6 +51,6 @@ query_workers = 1
 # local http RPC call listen port
 mongoose_listen = 127.0.0.1:8820
 
-# Write service requests to the log, defaults to false.
+# Write service requests to the log, defaults to DEBUG. [TRACE/DEBUG/INFO]
 log_level = DEBUG
 ```

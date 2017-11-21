@@ -26,10 +26,10 @@ b2.exe address-model=64 runtime-link=static link=static
 ```
 
 * Build zeromq-4.2.1
-Open zeromq-4.2.1\builds\msvc\vs2015\libzmq.sln, switch to libzmq project, then build x64 Platform StaticDebug and StaticRelease versions separately.
+Open `zeromq-4.2.1\builds\msvc\vs2015\libzmq.sln`, switch to libzmq project, then build x64 Platform StaticDebug and StaticRelease versions separately.
 
 * Build secp256k1
-Open secp256k1\builds\msvc\vs2013\secp256k1.sln, switch to secp256k1 project, then build x64 Platform StaticDebug or StaticRelease versions separately.
+Open `secp256k1\builds\msvc\vs2013\secp256k1.sln`, switch to secp256k1 project, then build x64 Platform StaticDebug or StaticRelease versions separately.
 
 * Build metaverse
-Open metaverse\builds\msvc-140\metaverse.sln, switch to mvsd project, then build x64 Platform Debug or Release versions separately.
+Open `metaverse\builds\msvc-140\metaverse.sln`, switch to mvsd project, then build x64 Platform Debug or Release versions separately.

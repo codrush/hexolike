@@ -1,96 +1,99 @@
----
-title: Get Started
+title: Build On MacOSX
 comments: false
 ---
 
-# Get started
-
-## Requirements
-
-To get started you need to have a couple of things installed:
-
-* [NodeJS](https://nodejs.org)
-* [Git](https://git-scm.com)
-
-### Installing Hexo
-
-Once all the requirements are installed, you can install [Hexo](https://hexo.io/) with npm:
-
-```
-$ npm install -g hexo-cli
+## Get the source code
+```bash
+git clone https://github.com/mvs-org/metaverse.git
 ```
 
-## Quick Start
+## Install Homebrew
+If you have installed Homebrew, just skip this step.
 
-To quickly bootstrap a documentation website, we have setup an [example seed project](https://github.com/zalando-incubator/hexo-theme-doc-seed) that can be **cloned** and used a starting point.
-
-* Clone the seed project
-
-```
-$ git clone https://github.com/zalando-incubator/hexo-theme-doc-seed.git
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-* Go into the resulting directory and install the dependencies
+## Compile tools settings 
+| Compilier | Minimum Version |  Recommand Version |
+| --------------------------------- | ----------------- | ------------ |
+| gcc/g++ |   5.0.0               |  Newer than 5.0.0 |
+| LLVM    |   8.0.0               |  Newer than 8.0.0 |
+* c++ Compiler 
+* 
+Compiler versions could be viewed by `c++ -v`
 
-```
-$ cd hexo-theme-doc-seed && npm install
-```
+If your version does not support it, you can refer to [How to upgrade GCC version] (/helpdoc/upgrade-gcc.html).
+All MVS node clients are static links (including libstdc ++). Thus, there is no extra dependency after compilation.
 
-*  Start the preview server
-
-```
-$ hexo s
-```
-
-This command will run a built-in http server and watch for changes.
-
-If you open your browser to http://localhost:4000 you should see the documentation website up and running.     
-Nice! Now you can start [writing](./usage-and-configuration/writing.html) your content... have fun!
-
-
-> To know more, please check [server](https://hexo.io/docs/server.html) and [generating](https://hexo.io/docs/generating.html) from the official Hexo documentation.
-
-
-## Long Start
-
-This section assumes that you are familiar with [Hexo](https://hexo.io) usage. For new starters we suggest you have a look at the [Quick Start](#Quick-Start) guide.
-
-### Install via npm (recommended)
-
-```
-$ npm install git+ssh://git@github.com:zalando-incubator/hexo-theme-doc.git --save
+* Make Tools
+CMake2.8+
+```bash
+brew install cmake
 ```
 
-Symlink the package in the `themes` folder. For Linux:
 
+## Library dependence information
+| Library Dependencies | Minimum Version | Recommand Version |
+| --------------------------------- | ----------------- | ------------ |
+| Boost     |   1.56               |  1.58/1.64      |
+| ZeroMQ|   4.20               |  4.21           |
+| spec256k1 |   -                  |  -              |
+
+The library compiling depends GNU toolchain\(automake/autoconf/libtool\) and please install it.
+```bash
+brew install automake/autoconf/libtool
 ```
-$ ln -s ./themes/doc ./node_modules/hexo-theme-doc
+Or you can compile by yourself and then install it with no version requirements.
+
+
+## Installation steps of the dependence library.
+### boost 1.56+
+```bash
+sudo yum/apt-get/brew install libboost-all-dev
+```
+If build boost manually, please download boost from <http://www.boost.org/>.
+
+If build with boost 1.59~1.63, get compiling error on json_parser 'placeholders::_1' caused by boost bug:
+```
+/usr/local/include/boost/property_tree/json_parser/detail/parser.hpp:217:52: error: ‘_1’ was not declared in this scope
+```
+Please upgrade to 1.64, or modify parser.hpp manually at first.
+See boost issue details: <https://github.com/boostorg/property_tree/pull/26>
+
+### ZeroMQ 4.2.1+
+Install GNU toochain(automake/autoconf/libtool) at first:
+```bash
+yum/apt-get/brew install automake/autoconf/libtool
+```
+Module server/explorer required.
+```bash
+wget https://github.com/zeromq/libzmq/releases/download/v4.2.1/zeromq-4.2.1.tar.gz
+tar -xzvf zeromq-4.2.1.tar.gz
+cd zeromq-4.2.1
+./autogen.sh
+./configure
+make -j4
+sudo make install && sudo ldconfig
 ```
 
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
-```
-
-### Install via git (not recommended)
-
-```
-$ git clone git@github.com:zalando-incubator/hexo-theme-doc.git themes/doc
-$ cd themes/doc && npm install --prod
-```
-
-Install the required hexo plugins in your project:
-```
-$ npm install hexo-renderer-ejs hexo-renderer-marked --save
+### secp256k1 
+Module blockchain/database required.
+```bash
+git clone https://github.com/mvs-live/secp256k1
+cd secp256k1
+./autogen.sh
+./configure --enable-module-recovery
+make -j4
+sudo make install && sudo ldconfig
 ```
 
-### Activate the theme
-
-Update your project `_config.yml`
-
-```yaml
-theme: doc
-
-ignore:
-  - '**/themes/**/*(node_modules|lib)' # improve performance while `hexo server` is running
+## Compile and Install MVS.
+```bash
+git clone https://github.com/mvs-org/metaverse.git
+cd metaverse && mkdir build && cd build
+cmake ..
+make -j4
+make install
 ```
+It takes about 40 minutes.
