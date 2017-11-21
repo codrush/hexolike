@@ -1,4 +1,4 @@
-title: 概览
+title: 轻松使用
 comments: false
 ---
 
@@ -10,14 +10,17 @@ comments: false
 * [Windows下安装](setup-windows.html)
 * [Linux下安装](setup-linux.html)
 * [MacOSX下安装](setup-macosx.html)
-* [试用我们的测试网络](http://test4.metaverse.live:8820/)
 
-## 开始使用
+可以在[在这里](http://mymvs.info/free)领取小额主网ETP。
 
-### 通过交易ID查询交易
+## 快速上手
+
+### 创建账户
 ### 收取ETP
+### 通过交易ID查询交易
 ### 转移ETP到其他地址
 
+您可以[试用我们的在线测试网络](http://test4.metaverse.live:8820/)进行测试。
 
 # 元界全节点钱包介绍                                                                
 
