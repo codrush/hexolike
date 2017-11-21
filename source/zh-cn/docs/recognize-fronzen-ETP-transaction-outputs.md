@@ -1,9 +1,7 @@
 title: Recognize Fronzen ETP Transaction Outputs
 comments: false
 ---
-Because of [onchain-deposit](/docs/features-onchain-deposit.html), users can send FRONZEN ETP to any address. So the exchange platforms and wallet serivie prividers have to 
-recognize this type of transaction outputs.
-
+Because of [onchain-deposit](/docs/features-onchain-deposit.html), users can send FRONZEN ETP to any address. So the exchange platforms and wallet serivie prividers have to recognize this type of transaction outputs.  
 
 ## How to recognize fronzen ETP transaction outputs?
 A regular P2PKH (Pay to public key hash) output script looks like this:
