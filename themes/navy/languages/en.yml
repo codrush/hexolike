@@ -40,6 +40,9 @@ sidebar:
     testnet: Testnet
     commands_reference: Commands reference
     private_chain: Private chain
+    platform_deployment: Platform deployment
+    deploy_wallet: Deploy wallet on server
+    fronzen_etp_outputs: Identifying Fronzen ETP
 
   api:
     overview: index

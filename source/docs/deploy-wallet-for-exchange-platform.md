@@ -1,7 +1,6 @@
 title: Deploy Metaverse Wallet For Exchange Platforms
 comments: false
 ---
-
 ## Frequently-Used Documents
 * [API-Call-List](/api)
 
@@ -103,8 +102,8 @@ Regarding user deposit, the exchange need to be informed about the following:
 ''The exchange needs to write code to monitor every transaction in a block and record all the transactions related to the exchanges addresses in the database. If a deposit occur, then the balance of the user should be updated.''
 
 
-## *CAUTION PLEASE*
-1. Metaverse wallet can combine small etp automaticly, no need to group small changes manually.
+## <font size=5 color=red>CAUTION PLEASE</font>
+1. Metaverse wallet can combine small etp automatically, no need to group small changes manually.
 2. When sending assets , if use command 'send', my changes will go back to a random address belongs to this account. **So we strongly recommand exchange platform to use 'sendfrom'/'sendmore'.**
-3. [Recognize Fronzen ETP Transaction Outputs](/helpdoc/Recognize-Fronzen-ETP-Transaction-Outputs.html)
+3. [Recognize Fronzen ETP Transaction Outputs](recognize-fronzen-ETP-transaction-outputs.html)
 
