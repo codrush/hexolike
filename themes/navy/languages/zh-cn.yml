@@ -21,7 +21,7 @@ sidebar:
   docs:
     getting_started: 开始使用
     overview: 轻松上手
-    mainnet_parameters: 主网参数
+    mainnet_info: 主网信息
     windows_setup: Windows安装
     macosx_setup: Macosx安装
     linux_setup: Linux安装
