@@ -1,4 +1,5 @@
 title:  链上存款(锁仓)
+comments: false
 ---
 
 #  功能说明

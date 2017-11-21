@@ -1,5 +1,4 @@
 title: 轻松使用
-comments: false
 ---
 
 # 开始使用

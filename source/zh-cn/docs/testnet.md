@@ -1,4 +1,5 @@
 title: 元界区块链测试网
+comments: false
 ---
 
 ## 测试网

@@ -1,4 +1,5 @@
 title: 命令行使用
+comments: false
 ---
 
 # mvsd的使用方式

@@ -1,4 +1,5 @@
 title: Windows环境下编译
+comments: false
 ---
 
 ## Dependencies:

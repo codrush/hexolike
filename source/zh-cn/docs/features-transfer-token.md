@@ -1,4 +1,5 @@
 title: 转移资产
+comments: false
 ---
 
 # 转移资产

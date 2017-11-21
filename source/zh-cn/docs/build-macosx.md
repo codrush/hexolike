@@ -1,4 +1,5 @@
 title: MacOSX环境下编译
+comments: false
 ---
 
 ## 获取源码

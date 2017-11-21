@@ -1,4 +1,5 @@
 title: 搭建私有链
+comments: false
 ---
 
 ## 参照[编译]和[配置选项]

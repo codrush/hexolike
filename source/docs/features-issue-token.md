@@ -1,4 +1,5 @@
 title: Create and Issue Tokens
+comments: false
 ---
 
 # Feature description

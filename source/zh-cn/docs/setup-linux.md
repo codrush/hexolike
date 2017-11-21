@@ -1,4 +1,5 @@
 title: 安装Linux版本钱包
+comments: false
 ---
 
 本文以v0.7.1为示例。

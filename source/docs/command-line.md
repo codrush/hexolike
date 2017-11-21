@@ -1,5 +1,6 @@
 ---
 title: Search
+comments: false
 ---
 
 # Search
@@ -21,6 +22,7 @@ Search can be customized on a per-page basis using [front-matter](https://hexo.i
     ```markdown
     ---
     title: My Page
+comments: false
     search: exclude
     ---
 

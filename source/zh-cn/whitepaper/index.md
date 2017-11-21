@@ -1,4 +1,5 @@
 title: Metaverse 白皮书
+comments: false
 ---
 
 ## Metaverse 核心要素

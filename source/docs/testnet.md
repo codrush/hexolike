@@ -1,5 +1,6 @@
 ---
 title: Google Analytics
+comments: false
 ---
 
 # Google Analytics

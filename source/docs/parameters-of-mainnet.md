@@ -1,4 +1,5 @@
 title: Metaverse Mainnet Parameters
+comments: false
 ---
 
 ## mainnet parameters of Metaverse

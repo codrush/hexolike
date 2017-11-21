@@ -1,4 +1,5 @@
 title: Metaverse White Paper
+comments: false
 ---
 
 ## Metaverse Three Pillars

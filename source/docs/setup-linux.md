@@ -1,4 +1,5 @@
 title: Get Started
+comments: false
 ---
 
 # Get started

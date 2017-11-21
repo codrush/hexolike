@@ -1,4 +1,5 @@
 title: 创建并发行资产token
+comments: false
 ---
 
 # 功能说明

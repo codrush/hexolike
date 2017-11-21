@@ -1,4 +1,5 @@
 title: Asset(token) Transfer
+comments: false
 ---
 
 #  Asset transfer

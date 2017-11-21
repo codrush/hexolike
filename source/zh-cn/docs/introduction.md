@@ -1,4 +1,5 @@
 title: 介绍
+comments: false
 ---
 
 本文Metaverse简称为MVS;

@@ -1,4 +1,5 @@
 title: Linux环境下编译
+comments: false
 ---
 
 ## 可以使用的Linux版本
