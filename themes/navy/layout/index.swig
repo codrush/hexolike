@@ -12,7 +12,7 @@
     <div class="inner">
       {{ page.content }}
       <ul id="intro-cmd-wrap">
-        <li class="intro-cmd-item">mvsd -t</li>
+        <li class="intro-cmd-item">mvsd</li>
         <li class="intro-cmd-item">mvs-cli getnewaccount &lt;account&gt; &lt;passwd&gt;</li>
         <li class="intro-cmd-item">mvs-cli getnewaddress &lt;account&gt; &lt;passwd&gt;</li>
         <li class="intro-cmd-item">mvs-cli send &lt;account&gt; &lt;passwd&gt; &lt;receiver_address&gt; &lt;ETP_bits&gt;</li>
