@@ -28,6 +28,6 @@ unzip mvs-linux-x86_64-v0.7.1.zip
 ./mvs-cli help
 ```
 
-## Accesses.
-1. run mvs-cli in terminal.
-1. Access wallet on browser.
+## Get started
+1. Run mvs-cli in terminal.
+2. Access wallet on browser.
