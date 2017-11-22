@@ -15,13 +15,13 @@ If you have installed Homebrew, just skip this step.
 ```
 
 ## Compile tools settings 
-| Compilier | Minimum Version |  Recommand Version |
+| Compilier | Minimum Version |  Recommended Version |
 | --------------------------------- | ----------------- | ------------ |
 | gcc/g++ |   5.0.0               |  Newer than 5.0.0 |
 | LLVM    |   8.0.0               |  Newer than 8.0.0 |
 * c++ Compiler 
 * 
-Compiler versions could be viewed by `c++ -v`
+Compiler versions can be viewed using `c++ -v`
 
 If your version does not support it, you can refer to [How to upgrade GCC version] (/helpdoc/upgrade-gcc.html).
 All MVS node clients are static links (including libstdc ++). Thus, there is no extra dependency after compilation.
@@ -34,13 +34,13 @@ brew install cmake
 
 
 ## Library dependence information
-| Library Dependencies | Minimum Version | Recommand Version |
+| Library Dependencies | Minimum Version | Recommended Version |
 | --------------------------------- | ----------------- | ------------ |
 | Boost     |   1.56               |  1.58/1.64      |
 | ZeroMQ|   4.20               |  4.21           |
 | spec256k1 |   -                  |  -              |
 
-The library compiling depends GNU toolchain\(automake/autoconf/libtool\) and please install it.
+The library compiling depends on the GNU toolchain\(automake/autoconf/libtool\), please install it.
 ```bash
 brew install automake/autoconf/libtool
 ```
@@ -52,9 +52,9 @@ Or you can compile by yourself and then install it with no version requirements.
 ```bash
 sudo yum/apt-get/brew install libboost-all-dev
 ```
-If build boost manually, please download boost from <http://www.boost.org/>.
+If building boost manually, please download boost from <http://www.boost.org/>.
 
-If build with boost 1.59~1.63, get compiling error on json_parser 'placeholders::_1' caused by boost bug:
+If building with boost 1.59~1.63, get compiling error on json_parser 'placeholders::_1' caused by boost bug:
 ```
 /usr/local/include/boost/property_tree/json_parser/detail/parser.hpp:217:52: error: ‘_1’ was not declared in this scope
 ```
