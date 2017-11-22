@@ -5,17 +5,17 @@ comments: false
 MVS，short for Metaverse
 
 ## Metaverse full node introduction
-Full nodes are ones that store all the data of the MVS blockchain and are connected to the blockchain network in a P2P manner. All nodes in the blockchain network are equal which act as both clients and servers.
+Full nodes are nodes that store the entire Metaverse blockchain and are connected in a P2P network architecture. In the blockchain network, all full nodes are treated as equals, and serve as both clients and servers. 
 
-The MVS full node consists of two programs and a set of front-end resource:
-* mvsd: The core wallet program, which is similar to bitcoind in bitcoin;
-* mvs-cli: an interactive tool of the command-line that is similar to bitcoin-cli in bitcoin;
-* mvs-htmls: the angularjs implementation which belongs to browser-based front-end interactive resources. This resource is not required for developers.
+The MVS full node consists of two programs and a graphical interface:
+•   mvsd: The core wallet program, similar to Bitcoin’s bitcoind;
+•   mvs-cli: a command line interface, similar to Bitcoin’s bitcoin-cli
+•   mvs-htmls: a browser-based graphical user interface built with AngularJS. This GUI may not be necessary for developers. 
 
 
-## MVS full nodes wallet download address:
+## MVS full node wallet download address:
 
-Generally, the latest MVS full node client could be downloaded from Metaverse official website (https://mvs.org#download)
+Generally, the latest MVS full node client can be downloaded from Metaverse's official website (https://mvs.org#download)
 
 
 Supported versions:
@@ -30,7 +30,7 @@ Supported versions:
 | openSUSE                      | 13.2+ |   √               |
 | Docker                            | -     |   √               |
 
-## Function list of the MVS full nodes wallet
+## MVS full node wallet - function list
 |                 | mvsd&mvs-cli | Broswer GUI |
 | --------------- | ---- | ---- |
 |Graphic Interfac          |       |   √    |
@@ -55,7 +55,7 @@ Supported versions:
 
 ## Port descriptions
 
-The firewall port needs to be opened if external programs are allowed to access the node's API. The following is port descriptions which can be partially or thoroughly open as required.
+The firewall port needs to be opened if external programs are allowed to access the node's API. The following is port descriptions which can be partially or fully opened as required.
 
 
 |                    | Main Net | Test Net |
