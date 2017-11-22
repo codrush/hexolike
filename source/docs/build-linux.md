@@ -12,13 +12,13 @@ git clone https://github.com/mvs-org/metaverse.git
 ```
 
 ## Compiling tools settings
-| Compilier | Minimum Version |  Recommand Version |
+| Compilier | Minimum Version |  Recommended Version |
 | --------------------------------- | ----------------- | ------------ |
 | gcc/g++ |   5.0.0               |  Newer than 5.0.0 |
 | LLVM    |   8.0.0               |  Newer than 8.0.0 |
 * c++ Compiler
 * 
-Compiler versions could be viewed by `c++ -v`
+Compiler versions can be viewed using `c++ -v`.
 If your version does not support it, you can refer to [How to upgrade GCC version] (/helpdoc/upgrade-gcc.html).
 All MVS node clients are static links. (including libstdc ++). Thus, there is no extra dependency after compilation.
 
@@ -30,8 +30,8 @@ yum/apt-get/brew install cmake
 ```
 
 
-## Library dependence information
-| Library Dependencies | Minimum Version | Recommand Version |
+## Library dependencies
+| Library Dependencies | Minimum Version | Recommended Version |
 | --------------------------------- | ----------------- | ------------ |
 | Boost     |   1.56               |  1.58/1.64      |
 | ZeroMQ|   4.20               |  4.21           |
@@ -44,14 +44,14 @@ yum/apt-get/brew install automake/autoconf/libtool
 or you can compile by yourself and then install it with no version requirements.
 
 
-## Installation steps of the dependence library.
+## Installing dependencies
 ### boost 1.56+
 ```bash
 sudo yum/apt-get/brew install libboost-all-dev
 ```
-If build boost manually, please download boost from <http://www.boost.org/>.
+If building boost manually, please download boost from <http://www.boost.org/>.
 
-If build with boost 1.59~1.63, get compiling error on json_parser 'placeholders::_1' caused by boost bug:
+If building with boost 1.59~1.63, get compiling error on json_parser 'placeholders::_1' caused by boost bug:
 ```
 /usr/local/include/boost/property_tree/json_parser/detail/parser.hpp:217:52: error: ‘_1’ was not declared in this scope
 ```
