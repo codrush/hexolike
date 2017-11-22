@@ -22,7 +22,6 @@ docs:
     private_chain: private-chain.html
   platform_deployment:
     deploy_wallet: deploy-wallet-for-exchange-platform.html
-    fronzen_etp_outputs: recognize-fronzen-ETP-transaction-outputs.html
 
 
 api:

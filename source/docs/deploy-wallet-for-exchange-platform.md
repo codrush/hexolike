@@ -1,4 +1,4 @@
-title: Deploy Metaverse Wallet For Exchange Platforms
+title: Deploy Metaverse Wallet For Platforms
 comments: false
 ---
 ## Frequently-Used Documents
