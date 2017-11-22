@@ -2,7 +2,7 @@ title: Metaverse Mainnet Information
 comments: false
 ---
 
-## mainnet parameters of Metaverse
+## Mainnet parameters of Metaverse
 | Name | Value | Unit |
 | -------------| :-----:| -----: |
 | Total Supply| 100,000,000   |ETP|
@@ -20,9 +20,9 @@ comments: false
 | Actual Block Time | 33  |seconds|
 | Go-live Time | Feb.11.2017 | - |
 
-## Realtime qurey for ETP Circulation API
+## Realtime query for ETP Circulation API
 Query API: https://explorer.mvs.org/api/circulation
 
 ## Metaverse Full Size Logo
-Download metaverse icon for full zize:
+Download the full-sized metaverse icon:
 <http://newmetaverse.org/img/metaverse-logo.zip>
