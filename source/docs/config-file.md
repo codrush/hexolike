@@ -8,7 +8,7 @@ Get config files from <https://github.com/mvs-org/metaverse/tree/master/etc>:
 * `mvs-test.conf` - testnet configuration file
 * `mvs-full-setting-template.conf`  - template for all parameters. 
 
-The defaults work path for mvs.conf as below:
+The default work path for mvs.conf is as follows:
 * Windows   : `%HOMEPATH%\AppData\Roaming\Metaverse`
 * Apple OSX : `~/Library/Application\ Support/Metaverse`
 * Linux/Uinx: `~/.metaverse`
