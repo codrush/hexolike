@@ -45,7 +45,8 @@ sidebar:
     fronzen_etp_outputs: 识别冻结的ETP
 
   api:
-    overview: API
+    introduction: 介绍
+    sendetp: 发送ETP
     blocks: 区块
     account: 账户
     address: 地址

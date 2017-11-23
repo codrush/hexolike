@@ -45,7 +45,8 @@ sidebar:
     fronzen_etp_outputs: Identifying Fronzen ETP
 
   api:
-    overview: index
+    introduction: Introduction
+    sendetp: Sending ETP
     blocks: Blocks
     account: Account
     address: Address

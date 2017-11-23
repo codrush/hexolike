@@ -25,20 +25,24 @@ docs:
 
 
 api:
+  introduction:
+    introduction: index.html
   blocks:
-    overview: index.html
+    blocks: blocks.html
   account:
-    overview: index.html
+    account: account.html
   address:
-    overview: index.html
+    address: address.html
+  sendetp:
+    sendetp: sendetp.html
   transaction:
-    overview: index.html
+    transaction: transaction.html
   balance:
-    overview: index.html
+    balance: balance.html
   asset:
-    overview: index.html
+    asset: asset.html
   identity:
-    overview: index.html
+    identity: identity.html
 
 developers:
   overview:
